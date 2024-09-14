@@ -3,10 +3,18 @@ import { Link } from 'react-router-dom'
 import { Card, CardContent, CardActions, Divider } from '@mui/material'
 import cars from '../cars.json'
 
-const Home = () => {
+const Home = (props) => {
     console.log('CARS', cars)
     return (
         <div className="card-container">
+            {/* Redux Testing */}
+            {/* <h1>{props.hello || "not defined"}</h1>
+            <h1>{props.poop || "not defined"}</h1>
+            <h1>{props.user || "not defined"}</h1>
+            {props.cars.map((car, index) => (
+                    <h2 key={index}>{car}</h2>
+                )
+            )} */}
             {cars.map((car, idx) => (
                 <Card key={idx} className="card">
                     <CardContent className="text-gray">

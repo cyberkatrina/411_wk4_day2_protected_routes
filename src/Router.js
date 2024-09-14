@@ -1,7 +1,7 @@
 import React from 'react'
 import { Routes, Route, Navigate } from 'react-router'
 import cookie from 'cookie'
-import Home from './components/Home'
+import HomeContainer from './containers/HomeContainer'
 import About from './components/About'
 import Car from './components/Car'
 import Login from './components/Login'
@@ -24,7 +24,7 @@ const ProtectedRoute = ({component: Component, ...rest}) => {
 const Router = () => {
     return (
         <Routes>
-            <Route path="/" element={<ProtectedRoute component={Home}/>} />
+            <Route path="/" element={<ProtectedRoute component={HomeContainer}/>} />
             <Route path="/login" element={<Login/>} />
             <Route path="/about" element={<ProtectedRoute component={About}/>} />
             <Route path="/car/:id" element={<ProtectedRoute component={Car}/>} />

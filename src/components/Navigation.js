@@ -4,7 +4,7 @@ import { AppBar, Toolbar, IconButton, Typography } from "@mui/material";
 import cookie from "cookie";
 import MenuIcon from "@mui/icons-material/Menu";
 
-const Navigation = () => {
+const Navigation = (props) => {
   const navigate = useNavigate();
 
   return (
